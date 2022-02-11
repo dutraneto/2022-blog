@@ -30,3 +30,10 @@ export const Quote = styled.h3`
   margin-top: 3rem;
   width: min(30rem, 100%);
 `
+
+export const LinkToPost = styled.h4`
+  margin-top: 1rem;
+  color: #ffffff !important;
+  text-decoration: none;
+
+`
