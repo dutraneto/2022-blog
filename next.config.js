@@ -5,7 +5,7 @@ const runtimeCaching = require('next-pwa/cache')
 const isProd = process.env.NODE_ENV === 'production'
 
 // eslint-disable-next-line no-undef
-module.exports = withPWA({
+withPWA({
   pwa: {
     dest: 'public',
     runtimeCaching,
@@ -13,7 +13,10 @@ module.exports = withPWA({
   }
 })
 
-// eslint-disable-next-line no-undef
-// module.exports = {
-//   reactStrictMode: true
-// }
+module.exports = {
+  withPWA,
+  reactStrictMode: true,
+  images: {
+    domains: ['res.cloudinary.com']
+  }
+}

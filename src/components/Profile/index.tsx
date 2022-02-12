@@ -1,10 +1,18 @@
-import Avatar from "components/Avatar"
-import * as S from "./styled"
+import Avatar from 'components/Avatar'
+import * as S from './styled'
 import Link from 'next/link'
 
-export default function Profile ({ author = 'José Dutra', position = 'Frontend Developer', isMobileHeader = true }) {
+interface Props {
+  author: string
+  position: string
+  isMobileHeader: boolean
+}
+
+export default function Profile(props: Props) {
+  const { author, position, isMobileHeader } = props
+
   return (
-    <S.ProfileWrapper isMobileHeader={isMobileHeader}>
+    <S.ProfileWrapper>
       <Link href="/">
         <S.ProfileLink>
           <Avatar />

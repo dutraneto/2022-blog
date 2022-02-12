@@ -1,14 +1,27 @@
-import * as S from "./styled"
+import React from 'react'
+import Profile from 'components/Profile'
+import * as S from './styled'
 
-type LayoutProps = {
-  children: JSX.Element
+import { userProfile } from '../../lib/static'
+
+const { author, position, isMobileHeader } = userProfile
+
+type Props = {
+  children: React.ReactNode
+  author: string
+  position: string
+  isMobileHeader: boolean
 }
 
-export default function Layout({ children }: LayoutProps) {
+const Layout: React.FC<Props> = ({ children }) => (
+  <S.LayoutWrapper>
+    <Profile
+      author={author}
+      position={position}
+      isMobileHeader={isMobileHeader}
+    />
+    <S.LayoutMain>{children}</S.LayoutMain>
+  </S.LayoutWrapper>
+)
 
-  return (
-    <S.LayoutWrapper>
-      <S.LayoutMain>{children}</S.LayoutMain>
-    </S.LayoutWrapper>
-  )
-}
+export default Layout

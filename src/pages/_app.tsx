@@ -4,21 +4,18 @@ import Head from 'next/head'
 
 import GlobalStyles from 'styles/globals'
 
+import { userProfile } from '../lib/static'
+
 function App({ Component, pageProps }: AppProps) {
+  const { author, position, favicon } = userProfile
   return (
     <>
       <Head>
-        <title>José Dutra | Boilerplate</title>
-        <link
-          rel="shortcut icon"
-          href="/images/favicon.png"
-          type="image/x-icon"
-        />
-        <link
-          rel="apple-touch-icon"
-          href="/images/favicon.png"
-          type="image/x-icon"
-        />
+        <title>
+          {author} | {position}
+        </title>
+        <link rel="shortcut icon" href={favicon} type="image/x-icon" />
+        <link rel="apple-touch-icon" href={favicon} type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
