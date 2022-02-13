@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import Link from 'next/link'
 
 export const ProfileWrapper = styled.section`
   color: var(--color-white);
-  display: ${({ isMobileHeader }) => (isMobileHeader ? 'none' : 'flex')};
+  display: ${(props) => (props.isMobileHeader ? 'none' : 'flex')};
   flex-direction: column;
+  width: 13.125rem;
 
   ${media.lessThan('large')`
     align-items: center;
     box-shadow: -5px 5px 0px #1e1527, 5px -5px 0px #2a1e37;
-    display: isMobileHeader ? 'flex' : 'none';
+    display: ${(props) => (props.isMobileHeader ? 'flex' : 'none')};
     padding: 1rem;
     background: var(--color-background-sidebar);
   `}
@@ -22,8 +22,7 @@ export const ProfileLink = styled.a`
   transition: all 1s !important;
 
   ${media.lessThan('large')`
-    display: inline-block;
-    /* flex-direction: column; */
+    display: flex;
     align-items: center;
     align-content: center;
     text-align: left;

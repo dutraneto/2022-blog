@@ -2,14 +2,9 @@ import Avatar from 'components/Avatar'
 import * as S from './styles'
 import Link from 'next/link'
 
-export default function Profile({
-  author,
-  position,
-  isMobileHeader
-}) {
+export default function Profile({ author, position, isMobileHeader }) {
   return (
-    <S.ProfileWrapper>
-      {isMobileHeader}
+    <S.ProfileWrapper isMobileHeader={isMobileHeader}>
       <Link href="/">
         <S.ProfileLink>
           <Avatar />
