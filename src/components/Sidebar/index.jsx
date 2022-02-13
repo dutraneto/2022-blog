@@ -1,14 +1,9 @@
 import Profile from 'components/Profile'
 // import SocialLinks from 'SocialLinks'
 // import MenuLinks from '../MenuLinks'
-import * as S from './styled'
+import * as S from './styles'
 
-type Props = {
-  author: string
-  position: string
-}
-
-export default function Sidebar(props: Props) {
+export default function Sidebar(props) {
   const { author, position } = props
 
   return (

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import * as S from './styled'
+import * as S from './styles'
 
 const Avatar = () => {
   return (

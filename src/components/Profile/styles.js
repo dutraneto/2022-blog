@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Link from 'next/link'
 
-import { ProfileProps } from '.'
-export const ProfileWrapper = styled.section<ProfileProps>`
+export const ProfileWrapper = styled.section`
   color: var(--color-white);
   display: ${({ isMobileHeader }) => (isMobileHeader ? 'none' : 'flex')};
   flex-direction: column;

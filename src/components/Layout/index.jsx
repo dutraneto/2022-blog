@@ -1,17 +1,13 @@
 import React from 'react'
 import Profile from 'components/Profile'
 import Sidebar from 'components/Sidebar'
-import * as S from './styled'
+import * as S from './styles'
 
 import { userProfile } from '../../lib/static'
 
 const { author, position, isMobileHeader } = userProfile
 
-type LayoutProps = {
-  children: React.ReactNode
-}
-
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children }) {
   return (
     <S.LayoutWrapper>
       <Profile

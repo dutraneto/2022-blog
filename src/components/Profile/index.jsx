@@ -1,18 +1,12 @@
 import Avatar from 'components/Avatar'
-import * as S from './styled'
+import * as S from './styles'
 import Link from 'next/link'
-
-export type ProfileProps = {
-  author: string
-  position: string
-  isMobileHeader: boolean
-}
 
 export default function Profile({
   author,
   position,
   isMobileHeader
-}: ProfileProps) {
+}) {
   return (
     <S.ProfileWrapper>
       {isMobileHeader}
