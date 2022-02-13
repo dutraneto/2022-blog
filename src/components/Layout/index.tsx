@@ -1,27 +1,26 @@
 import React from 'react'
 import Profile from 'components/Profile'
+import Sidebar from 'components/Sidebar'
 import * as S from './styled'
 
 import { userProfile } from '../../lib/static'
 
 const { author, position, isMobileHeader } = userProfile
 
-type Props = {
+type LayoutProps = {
   children: React.ReactNode
-  author: string
-  position: string
-  isMobileHeader: boolean
 }
 
-const Layout: React.FC<Props> = ({ children }) => (
-  <S.LayoutWrapper>
-    <Profile
-      author={author}
-      position={position}
-      isMobileHeader={isMobileHeader}
-    />
-    <S.LayoutMain>{children}</S.LayoutMain>
-  </S.LayoutWrapper>
-)
-
-export default Layout
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <S.LayoutWrapper>
+      <Profile
+        author={author}
+        position={position}
+        isMobileHeader={isMobileHeader}
+      />
+      <Sidebar author={author} position={position} />
+      <S.LayoutMain>{children}</S.LayoutMain>
+    </S.LayoutWrapper>
+  )
+}

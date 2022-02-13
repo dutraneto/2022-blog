@@ -2,15 +2,16 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Link from 'next/link'
 
-export const ProfileWrapper = styled.section`
+import { ProfileProps } from '.'
+export const ProfileWrapper = styled.section<ProfileProps>`
   color: var(--color-white);
-  display: ${(props) => (props.isMobileHeader ? 'none' : 'flex')};
+  display: ${({ isMobileHeader }) => (isMobileHeader ? 'none' : 'flex')};
   flex-direction: column;
 
   ${media.lessThan('large')`
     align-items: center;
     box-shadow: -5px 5px 0px #1e1527, 5px -5px 0px #2a1e37;
-    display: ${(props) => (props.isMobileHeader ? 'flex' : 'none')};
+    display: isMobileHeader ? 'flex' : 'none';
     padding: 1rem;
     background: var(--color-background-sidebar);
   `}
