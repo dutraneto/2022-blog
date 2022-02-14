@@ -1,5 +1,5 @@
 import Profile from 'components/Profile'
-// import SocialLinks from 'SocialLinks'
+import SocialLinks from 'components/SocialLinks'
 // import MenuLinks from '../MenuLinks'
 import * as S from './styles'
 
@@ -10,7 +10,7 @@ export default function Sidebar(props) {
     <S.SidebarWrapper isMenuOpen={isMenuOpen}>
       <Profile author={author} position={position} isMobileHeader={false} />
       <S.SidebarLinksContainer>
-        {/* <SocialLinks /> */}
+        <SocialLinks />
         {/* <MenuLinks setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} /> */}
       </S.SidebarLinksContainer>
     </S.SidebarWrapper>
