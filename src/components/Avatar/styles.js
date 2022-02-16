@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+
 export const AvatarWrapper = styled.div`
   img {
     border-radius: 50%;

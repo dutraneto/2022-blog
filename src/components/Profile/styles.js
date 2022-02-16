@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import Link from 'next/link'
 
 export const ProfileWrapper = styled.section`
   color: var(--color-white);
   display: ${(props) => (props.isMobileHeader ? 'none' : 'flex')};
   flex-direction: column;
+  width: 13.125rem;
 
   ${media.lessThan('large')`
     align-items: center;
@@ -22,8 +22,7 @@ export const ProfileLink = styled.a`
   transition: all 1s !important;
 
   ${media.lessThan('large')`
-    display: inline-block;
-    /* flex-direction: column; */
+    display: flex;
     align-items: center;
     align-content: center;
     text-align: left;

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import * as S from './styled'
+import * as S from './styles'
 
 const Main = ({
   title = 'Boilerplate',

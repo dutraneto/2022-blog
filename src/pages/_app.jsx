@@ -1,12 +1,11 @@
 // import App from "next/app";
-import type { AppProps /*, AppContext */ } from 'next/app'
 import Head from 'next/head'
 
-import GlobalStyles from 'styles/globals'
+import GlobalStyles from '../styles/globals'
 
 import { userProfile } from '../lib/static'
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }) {
   const { author, position, favicon } = userProfile
   return (
     <>
