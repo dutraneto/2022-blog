@@ -1,11 +1,12 @@
-import Link from 'next/link'
+import About from 'components/About'
 import Layout from 'components/Layout'
-import Profile from 'components/Profile'
 
 export default function Index() {
   return (
     <>
-      <Layout></Layout>
+      <Layout>
+        <About />
+      </Layout>
     </>
   )
 }
