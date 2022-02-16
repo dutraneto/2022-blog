@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Profile from 'components/Profile'
 import Sidebar from 'components/Sidebar'
+import MenuBar from 'components/MenuBar'
 import * as S from './styles'
 
 import { userProfile } from '../../lib/static'
@@ -12,7 +13,7 @@ export default function Layout({ children }) {
 
   return (
     <S.LayoutWrapper>
-      <Profile author={author} position={position} isMobileHeader={true} />
+      <Profile author={author} position={position} isMobileHeader />
       <Sidebar
         author={author}
         position={position}
@@ -20,6 +21,7 @@ export default function Layout({ children }) {
         isMenuOpen={isMenuOpen}
       />
       <S.LayoutMain>{children}</S.LayoutMain>
+      <MenuBar setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
     </S.LayoutWrapper>
   )
 }
