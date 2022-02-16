@@ -29,7 +29,7 @@ export const SidebarWrapper = styled.aside`
     margin: 0;
     border-radius: 0;
     transform: ${(props) =>
-      props.isMenuOpen ? 'translateX(0)' : 'translateX(-100vw)'};
+      props.isMenuOpen ? 'translateX(-100vw)' : 'translateX(0)'};
   `}
 `
 
