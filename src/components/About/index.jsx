@@ -9,9 +9,14 @@ const About = () => {
     <S.AboutWrapper>
       <S.AboutTitle>Hi!</S.AboutTitle>
       <S.AboutDescription>{salutation}</S.AboutDescription>
-      <Link href="/blog/" passHref>
-        <S.PortfolioLink href="/works/" title="Click to go to my blog">
-          Please, click here to visit my blog!
+      <Link href="https://github.com/dutraneto/2022-blog" passHref>
+        <S.PortfolioLink
+          href="https://github.com/dutraneto/2022-blog"
+          title="Click to go to this project source"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Please, click here to visit this project!
         </S.PortfolioLink>
       </Link>
     </S.AboutWrapper>
