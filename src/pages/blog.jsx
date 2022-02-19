@@ -1,5 +1,5 @@
 import Layout from 'components/Layout'
-import Post from 'components/Post'
+import PostList from 'components/PostList'
 
 import { getSortedPostsData } from '../lib/posts'
 
@@ -15,7 +15,7 @@ export async function getStaticProps() {
 const Blog = ({ allPostsData }) => {
   return (
     <Layout>
-      <Post allPostsData={allPostsData} />
+      <PostList allPostsData={allPostsData} />
     </Layout>
   )
 }

@@ -21,7 +21,7 @@ export const PostItemWrapper = styled.section`
   display: flex;
   align-items: center;
   border-bottom: 2px dashed var(--color-grey);
-  padding: 2rem 3rem;
+  padding: 3rem;
   width: 100%;
   position: relative;
   overflow: hidden;

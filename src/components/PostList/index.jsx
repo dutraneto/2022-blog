@@ -1,8 +1,9 @@
 import PostItem from 'components/PostItem'
+import * as S from './styles'
 
-const Post = (props) => {
+const PostList = (props) => {
   const { allPostsData } = props
-  return allPostsData.map((postItem) => {
+  const postsList = allPostsData.map((postItem) => {
     const { id, date, title, description, category, color } = postItem
     return (
       <PostItem
@@ -16,6 +17,7 @@ const Post = (props) => {
       />
     )
   })
+  return <S.PostListWrapper>{postsList}</S.PostListWrapper>
 }
 
-export default Post
+export default PostList
