@@ -7,7 +7,7 @@ const PostItem = (props) => {
   const { id, date, title, description, category, color } = props
   const TagIcon = category === 'Misc' ? Icons.Blog : Icons[category]
   return (
-    <Link href={`/blog/${id}`} passHref>
+    <Link href={`/posts/${id}`} passHref>
       <S.PostItemLink color={color}>
         <S.PostItemWrapper>
           <S.PostItemTag color={color}>
