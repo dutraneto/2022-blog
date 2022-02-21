@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Layout from 'components/Layout'
 import * as S from 'components/Post/styles'
 
@@ -6,6 +7,9 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 export default function Post({ postData }) {
   return (
     <Layout>
+      <Head>
+        <title>{postData.title}</title>
+      </Head>
       <S.PostHeader>
         <S.PostDate color={postData.color}>
           {postData.date} &bull; min to read
