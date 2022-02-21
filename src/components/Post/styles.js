@@ -49,7 +49,7 @@ export const PostDate = styled.p`
   color: ${(props) => props.color};
 `
 
-export const MainContent = styled.section`
+export const PostWrapper = styled.article`
   margin: auto;
   width: 45rem;
   padding: 5rem 5rem 0 0;
@@ -69,7 +69,9 @@ export const MainContent = styled.section`
     padding-left: 1rem;
     padding-right: 1rem;
   `}
+`
 
+export const PostBody = styled.section`
   .gatsby-highlight {
     border: 1px solid ${(props) => props.color};
     padding: 0 !important;

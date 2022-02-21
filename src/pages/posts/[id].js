@@ -13,9 +13,11 @@ export default function Post({ postData }) {
         <S.PostTitle>{postData.title}</S.PostTitle>
         <S.PostDescription>{postData.description}</S.PostDescription>
       </S.PostHeader>
-      <S.MainContent color={postData.color}>
-        {/* <div dangerouslySetInnerHTML={{ __html: post.html }}></div> */}
-      </S.MainContent>
+      <S.PostWrapper color={postData.color}>
+        <S.PostBody
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        ></S.PostBody>
+      </S.PostWrapper>
     </Layout>
   )
 }
@@ -29,7 +31,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = getPostData(params.id)
+  const postData = await getPostData(params.id)
   return {
     props: {
       postData
