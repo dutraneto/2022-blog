@@ -1,8 +1,6 @@
 // import App from "next/app";
 import Head from 'next/head'
-
 import GlobalStyles from '../styles/globals'
-
 import { userProfile } from '../lib/static'
 
 function App({ Component, pageProps }) {

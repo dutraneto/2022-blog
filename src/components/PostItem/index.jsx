@@ -1,10 +1,11 @@
 import * as S from './styles'
 import Icons from './icons'
-
 import Link from 'next/link'
 
+import { userProfile } from '../../lib/static'
+
 const PostItem = (props) => {
-  const { id, date, title, description, category, color } = props
+  const { id, date, title, description, category, color, language } = props
   const TagIcon = category === 'Misc' ? Icons.Blog : Icons[category]
   return (
     <Link href={`/posts/${id}`} passHref>
@@ -14,7 +15,10 @@ const PostItem = (props) => {
             <TagIcon />
           </S.PostItemTag>
           <S.PostItemInfo>
-            <S.PostItemDate>{date} &bull; 2 min to read</S.PostItemDate>
+            <S.PostItemDate>
+              {date} &bull; {language === 'Portuguese' ? 'autor' : 'author'}{' '}
+              &mdash; {userProfile.author}
+            </S.PostItemDate>
             <S.PostItemTitle>{title}</S.PostItemTitle>
             <S.PostItemDescription>{description}</S.PostItemDescription>
           </S.PostItemInfo>

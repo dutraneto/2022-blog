@@ -4,7 +4,7 @@ import * as S from './styles'
 const PostList = (props) => {
   const { allPostsData } = props
   const postsList = allPostsData.map((postItem) => {
-    const { id, date, title, description, category, color } = postItem
+    const { id, date, title, description, category, color, language } = postItem
     return (
       <PostItem
         key={id}
@@ -14,6 +14,7 @@ const PostList = (props) => {
         description={description}
         category={category}
         color={color}
+        language={language}
       />
     )
   })

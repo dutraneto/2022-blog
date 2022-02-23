@@ -1,27 +1,16 @@
 import Head from 'next/head'
 import Layout from 'components/Layout'
-import * as S from 'components/Post/styles'
+import Post from 'components/Post'
 
 import { getAllPostIds, getPostData } from '../../lib/posts'
 
-export default function Post({ postData }) {
+export default function PostPage({ postData }) {
   return (
     <Layout>
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <S.PostHeader>
-        <S.PostDate color={postData.color}>
-          {postData.date} &bull; min to read
-        </S.PostDate>
-        <S.PostTitle>{postData.title}</S.PostTitle>
-        <S.PostDescription>{postData.description}</S.PostDescription>
-      </S.PostHeader>
-      <S.PostWrapper color={postData.color}>
-        <S.PostBody
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-        ></S.PostBody>
-      </S.PostWrapper>
+      <Post postData={postData} />
     </Layout>
   )
 }

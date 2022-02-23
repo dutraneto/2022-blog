@@ -4,6 +4,7 @@ title: 'Utilizando o Método Copy em Python'
 description: 'Entendendo a importância das referências em Python, realizando uma shallow copy utilizando o método copy.'
 category: 'Python'
 color: '#3776AB'
+language: 'Portuguese'
 ---
 
 ## Introdução

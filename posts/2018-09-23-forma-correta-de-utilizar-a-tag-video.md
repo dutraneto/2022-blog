@@ -1,11 +1,10 @@
 ---
 date: '2018-09-23'
-title: "Utilizando a tag video da forma correta"
-description: "Como utilizar a tag video semanticamente"
-# tags: [dev, html, frontend]
-# feature-img: 'assets/img/img_post/lego.svg'
-category: Html5
-color: "#E34F26"
+title: 'Utilizando a tag video da forma correta'
+description: 'Como utilizar a tag video semanticamente'
+category: 'Html5'
+color: '#E34F26'
+language: 'Portuguese'
 ---
 
 # Introdução

@@ -1,9 +1,10 @@
 ---
 date: '2018-09-23'
-title: "Realizando uma chamada assícrona utilizando a API XMLHttpRequest"
-description: "Como utilizar a API XMLHttpRequest para executar um AJAX e obter dados de uma API REST"
+title: 'Realizando uma chamada assícrona utilizando a API XMLHttpRequest'
+description: 'Como utilizar a API XMLHttpRequest para executar um AJAX e obter dados de uma API REST'
 category: 'Javascript'
-color: "#F7DF1E"
+color: '#F7DF1E'
+language: 'Portuguese'
 ---
 
 # Introdução
@@ -77,15 +78,15 @@ body {
 
 ```javascript
 // our selectors
-const btn = document.querySelector("#btn")
-const span = document.querySelector("#verse")
+const btn = document.querySelector('#btn')
+const span = document.querySelector('#verse')
 
 // a new event
-btn.addEventListener("click", function() {
+btn.addEventListener('click', function () {
   // we create an instance of XMLHttpRequest
   let XHR = new XMLHttpRequest()
 
-  XHR.onreadystatechange = function() {
+  XHR.onreadystatechange = function () {
     // 4 means complete or request finished and response is ready
     if (XHR.readyState == 4 && XHR.status == 200) {
       // JSON parse
@@ -98,8 +99,8 @@ btn.addEventListener("click", function() {
   }
   // an exemple for calling the restful api
   XHR.open(
-    "GET",
-    "https://api.biblia.com/v1/bible/search/LEB.txt?query=bread&mode=verse&start=0&limit=100&key=fd37d8f28e95d3be8cb4fbc37e15e18e"
+    'GET',
+    'https://api.biblia.com/v1/bible/search/LEB.txt?query=bread&mode=verse&start=0&limit=100&key=fd37d8f28e95d3be8cb4fbc37e15e18e'
   )
   XHR.send()
 
