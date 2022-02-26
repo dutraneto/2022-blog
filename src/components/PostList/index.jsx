@@ -1,20 +1,18 @@
 import PostItem from 'components/PostItem'
 import * as S from './styles'
 
-const PostList = (props) => {
-  const { allPostsData } = props
-  const postsList = allPostsData.map((postItem) => {
-    const { id, date, title, description, category, color, language } = postItem
+const PostList = ({ posts }) => {
+  const postsList = posts.map((post, i) => {
     return (
       <PostItem
-        key={id}
-        id={id}
-        date={date}
-        title={title}
-        description={description}
-        category={category}
-        color={color}
-        language={language}
+        key={i}
+        slug={post.slug}
+        date={post.frontmatter.date}
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        category={post.frontmatter.category}
+        color={post.frontmatter.color}
+        language={post.frontmatter.language}
       />
     )
   })

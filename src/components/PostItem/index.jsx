@@ -5,10 +5,10 @@ import Link from 'next/link'
 import { userProfile } from '../../lib/static'
 
 const PostItem = (props) => {
-  const { id, date, title, description, category, color, language } = props
+  const { slug, date, title, description, category, color, language } = props
   const TagIcon = category === 'Misc' ? Icons.Blog : Icons[category]
   return (
-    <Link href={`/posts/${id}`} passHref>
+    <Link href={`/posts/${slug}`} passHref>
       <S.PostItemLink color={color}>
         <S.PostItemWrapper>
           <S.PostItemTag color={color}>

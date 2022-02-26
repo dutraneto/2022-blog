@@ -12,7 +12,6 @@
       "prismjs",
       {
         "languages": [
-          "html",
           "javascript",
           "css",
           "typescript",
@@ -24,6 +23,7 @@
           "python"
         ],
         "plugins": ["line-numbers"],
+        "theme": "tomorrow",
         "css": true
       }
     ]

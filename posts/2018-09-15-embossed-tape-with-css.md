@@ -20,7 +20,17 @@ Esses dias eu me deparei com uma daquelas fitas de plático autocolantes usadas 
 Logo veio a curiosidade de saber como imitar o design da mesma fita da figura acima, utilizando CSS puro.
 
 ### Mão na massa
-
+```html
+<pre class="language-javascript" markdown="1">
+<code>
+<p><span class="embossed blue">embossed</span></p>
+  <p><span class="embossed blue">plastic labels</span></p>
+  <p><span class="embossed green">letters and</span></p>
+  <p><span class="embossed green">number sets</span></p>
+  <p><span class="embossed red">dutraneto.com</span></p>
+</code>
+</pre>
+```
 ```html
 <!-- My custom embossed tape -->
 <div class="position">

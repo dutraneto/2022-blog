@@ -3,7 +3,6 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
-import prism from 'remark-prism'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 export function getSortedPostsData() {
@@ -17,6 +16,7 @@ export function getSortedPostsData() {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents)
+    console.log(matterResult)
     // Combine the data with the id
     return {
       id,
@@ -51,7 +51,6 @@ export async function getPostData(id) {
   // Use remark to convert markdown to html
   const processedContent = await remark()
     .use(html)
-    .use(prism)
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
   // Combine the data with the id

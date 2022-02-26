@@ -1,31 +1,29 @@
 import { useEffect } from 'react'
-import * as S from './styles'
 import Prism from 'prismjs'
-import { formatAllDateText } from '../../lib/utils'
+import 'prismjs/components/prism-jsx.js'
+import 'prismjs/plugins/line-numbers/prism-line-numbers.js'
+import * as S from './styles'
+import { formatAllDateText } from 'lib/utils'
 
-const Post = ({ postData }) => {
+const Post = ({ post }) => {
   useEffect(() => {
-    console.log('I have been fired')
-    Prism.manual = true
     Prism.highlightAll()
-  }, [postData])
+  }, [post])
   return (
     <>
       <S.PostHeader>
-        <S.PostDate color={postData.color}>
+        <S.PostDate color={post.frontmatter.color}>
           {formatAllDateText(
-            postData.language,
-            postData.date,
-            postData.contentHtml
+            post.frontmatter.language,
+            post.frontmatter.date,
+            post.content
           )}
         </S.PostDate>
-        <S.PostTitle>{postData.title}</S.PostTitle>
-        <S.PostDescription>{postData.description}</S.PostDescription>
+        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
+        <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
       </S.PostHeader>
-      <S.PostWrapper color={postData.color}>
-        <S.PostBody
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-        />
+      <S.PostWrapper color={post.frontmatter.color}>
+        <S.PostBody dangerouslySetInnerHTML={{ __html: post.content }} />
       </S.PostWrapper>
     </>
   )

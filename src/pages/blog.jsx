@@ -1,21 +1,21 @@
 import Layout from 'components/Layout'
 import PostList from 'components/PostList'
 
-import { getSortedPostsData } from '../lib/posts'
+import { getAllPosts } from 'lib/api'
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const posts = getAllPosts()
   return {
     props: {
-      allPostsData
+      posts
     }
   }
 }
 
-const Blog = ({ allPostsData }) => {
+const Blog = ({ posts }) => {
   return (
     <Layout>
-      <PostList allPostsData={allPostsData} />
+      <PostList posts={posts} />
     </Layout>
   )
 }
