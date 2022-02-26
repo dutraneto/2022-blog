@@ -2,8 +2,12 @@ import Head from 'next/head'
 import Layout from 'components/Layout'
 import BlogPost from 'templates/blog-post'
 
+import { serialize } from 'next-mdx-remote/serialize'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeHighlight from 'rehype-highlight'
+
 import { getPostBySlug, getAllPosts } from 'lib/api'
-import markdownToHtml from 'lib/markdownToHtml'
 
 export default function Post(props) {
   return (
@@ -28,11 +32,19 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const slug = params.slug
   const post = getPostBySlug(slug)
-  const content = await markdownToHtml(post.content || '')
+  const mdxSource = await serialize(post.content, {
+    mdxOptions: {
+      rehypePlugins: [
+        rehypeSlug,
+        [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+        rehypeHighlight
+      ]
+    }
+  })
   return {
     props: {
       ...post,
-      content
+      mdxSource
     }
   }
 }

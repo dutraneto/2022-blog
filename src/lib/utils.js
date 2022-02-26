@@ -3,6 +3,7 @@ export function translatedReadText(language) {
 }
 export function translatedDate(language, date) {
   const options = {
+    day: 'numeric',
     weekday: 'long',
     year: 'numeric',
     month: 'long'
