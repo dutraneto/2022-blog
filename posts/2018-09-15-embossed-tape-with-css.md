@@ -1,5 +1,6 @@
 ---
-date: '2018-09-15'
+layout: post
+date: 2018-09-15
 title: 'How to Design an Embossed Tape With CSS'
 description: 'Building an old Embossed Tape'
 category: 'Css3'

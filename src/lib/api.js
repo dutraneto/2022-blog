@@ -1,7 +1,7 @@
 import matter from 'gray-matter'
 import { join } from 'path'
 import fs from 'fs'
-
+import { translatedDate } from './utils'
 const postsDirectory = join(process.cwd(), 'posts')
 
 export function getPostBySlug(slug) {
@@ -12,10 +12,12 @@ export function getPostBySlug(slug) {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
+  const date = translatedDate(data.language, data.date)
+
   return {
     slug: realSlug,
     date: data.date.toString(),
-    frontmatter: { ...data },
+    frontmatter: { ...data, date },
     content
   }
 }

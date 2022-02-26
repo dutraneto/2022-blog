@@ -1,5 +1,6 @@
 ---
-date: '2018-04-21'
+layout: post
+date: 2018-04-21
 title: 'Utilizando o Método deepcopy em Python'
 description: 'Como realizar uma cópia profunda e construir objetos recursivamente com o deepcopy.'
 category: 'Python'

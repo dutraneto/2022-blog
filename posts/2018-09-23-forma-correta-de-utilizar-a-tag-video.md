@@ -1,5 +1,6 @@
 ---
-date: '2018-09-23'
+layout: post
+date: 2018-09-23
 title: 'Utilizando a tag video da forma correta'
 description: 'Como utilizar a tag video semanticamente'
 category: 'Html5'

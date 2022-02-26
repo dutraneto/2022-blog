@@ -1,5 +1,5 @@
 import Layout from 'components/Layout'
-import PostList from 'components/PostList'
+import BlogList from 'templates/blog-list'
 
 import { getAllPosts } from 'lib/api'
 
@@ -15,7 +15,7 @@ export async function getStaticProps() {
 const Blog = ({ posts }) => {
   return (
     <Layout>
-      <PostList posts={posts} />
+      <BlogList posts={posts} />
     </Layout>
   )
 }

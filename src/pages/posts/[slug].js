@@ -1,17 +1,17 @@
 import Head from 'next/head'
 import Layout from 'components/Layout'
-import Post from 'components/Post'
+import BlogPost from 'templates/blog-post'
 
 import { getPostBySlug, getAllPosts } from 'lib/api'
 import markdownToHtml from 'lib/markdownToHtml'
 
-export default function PostPage(props) {
+export default function Post(props) {
   return (
     <Layout>
       <Head>
         <title>{props.frontmatter.title}</title>
       </Head>
-      <Post post={props} />
+      <BlogPost post={props} />
     </Layout>
   )
 }

@@ -1,5 +1,6 @@
 ---
-date: '2018-09-23'
+layout: post
+date: 2018-09-23
 title: 'Realizando uma chamada assícrona utilizando a API XMLHttpRequest'
 description: 'Como utilizar a API XMLHttpRequest para executar um AJAX e obter dados de uma API REST'
 category: 'Javascript'

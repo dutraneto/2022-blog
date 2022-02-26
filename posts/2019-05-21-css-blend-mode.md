@@ -1,5 +1,6 @@
 ---
-date: '2019-05-21'
+layout: post
+date: 2019-05-21
 title: 'How to Use the Mix Blend Mode Property in a trick way'
 description: 'Using the Blend Mode Property to fill text with background color'
 category: 'Css3'

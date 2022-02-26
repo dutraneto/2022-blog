@@ -8,25 +8,12 @@
         "displayName": true
       }
     ],
-    [
-      "prismjs",
-      {
-        "languages": [
-          "javascript",
-          "css",
-          "typescript",
-          "json",
-          "jsx",
-          "markdown",
-          "bash",
-          "yaml",
-          "python"
-        ],
-        "plugins": ["line-numbers"],
-        "theme": "tomorrow",
-        "css": true
-      }
-    ]
+    ["prismjs", {
+      "languages": ["javascript", "css", "markup"],
+      "plugins": ["line-numbers"],
+      "theme": "tomorrow",
+      "css": true
+  }]
   ],
   "env": {
     "test": {
