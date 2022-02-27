@@ -12,6 +12,8 @@ export const LayoutWrapper = styled.div`
 export const LayoutMain = styled.main`
   background-image: linear-gradient(to bottom, #2a2139 75%, #34294f);
   min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: scroll;
   padding: 0 3.75rem 0 20rem;
   width: 100%;
 

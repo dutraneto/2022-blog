@@ -37,9 +37,9 @@ export const AboutDescription = styled.p`
 `
 
 export const PortfolioLink = styled.a`
-  color: #3776ab;
+  color: #f92aad;
   text-decoration: none;
-  border-bottom: 3px dashed #3776ab;
+  border-bottom: 3px dashed #f92aad;
   transition: filter 0.5s;
   padding-bottom: 5px;
   font-size: max(1.125rem, 1.8vw);

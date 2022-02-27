@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // https://nextjs.org/docs/advanced-features/custom-document
 import Document, {
   Html,

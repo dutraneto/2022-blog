@@ -27,12 +27,12 @@ const Title = styled.h1`
 `
 
 const Text = styled.p`
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.5rem;
 `
 
 const Button = styled.a`
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 6px;
   cursor: pointer;
   font-size: 1rem;
@@ -52,7 +52,7 @@ const Button = styled.a`
 const NotFoundPage = () => (
   <Container>
     <Title>404</Title>
-    <Text>It looks like you did not find what you're looking for</Text>
+    <Text>It looks like you did not find what you are looking for</Text>
     <Link href="/" passHref>
       <Button>⬅ Get back to blog!?</Button>
     </Link>
