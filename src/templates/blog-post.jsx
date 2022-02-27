@@ -1,10 +1,10 @@
 import * as S from 'styles/base'
 import { formatAllDateText } from 'lib/utils'
 import { MDXRemote } from 'next-mdx-remote'
-import CodePenBlend from 'components/PostFrames'
+import { CodePenBlend, Picture } from 'components/PostFrames'
 
 const BlogPost = ({ post }) => {
-  const components = { CodePenBlend }
+  const components = { CodePenBlend, Picture }
   return (
     <>
       <S.PostHeader>
