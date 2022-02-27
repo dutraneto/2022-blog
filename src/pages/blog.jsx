@@ -13,6 +13,8 @@ export async function getStaticProps() {
 }
 
 const Blog = ({ posts }) => {
+  let noPosts = 'There are no Posts...'
+  if (!posts) return noPosts
   return (
     <Layout>
       <BlogList posts={posts} />

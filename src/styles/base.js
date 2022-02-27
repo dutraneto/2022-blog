@@ -53,6 +53,7 @@ export const PostWrapper = styled.article`
   margin: auto;
   width: 45rem;
   padding: 5rem 5rem 0 0;
+  margin-bottom: 5rem;
 
   ${media.lessThan('large')`
     padding-right: 0;
@@ -61,7 +62,7 @@ export const PostWrapper = styled.article`
   ${media.lessThan('medium')`
     width: 100%;
     max-width: 92vw;
-    margin: 0 auto;
+    margin: 0 auto 5rem;
   `}
 
   ${media.lessThan('small')`

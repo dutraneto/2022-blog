@@ -10,7 +10,6 @@ const PostListWrapper = styled.div`
   `}
 `
 const BlogList = ({ posts }) => {
-  console.log(posts)
   const sortedPosts = posts
     .map((post, i) => (
       <Post
