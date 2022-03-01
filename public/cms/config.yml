@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: main
+  branch: develop
   repo: dutraneto/2022-blog
   base_url: https://2022-blog.vercel.app/
   auth_endpoint: api/auth/ # Essa rota vai ser muito importante mais para frente
