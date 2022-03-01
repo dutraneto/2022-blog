@@ -3,7 +3,7 @@ backend:
   branch: main
   repo: dutraneto/2022-blog
   base_url: https://2022-blog.vercel.app/
-  auth_endpoint: api/auth # Essa rota vai ser muito importante mais para frente
+  auth_endpoint: api/auth/ # Essa rota vai ser muito importante mais para frente
 
 media_folder: public/images
 public_folder: /images
@@ -24,13 +24,28 @@ collections:
       - {
           label: 'Date',
           name: 'date',
-          widget: 'datetime',
+          widget: 'date',
           format: 'YYYY-MM-DD'
         }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Category', name: 'category', widget: 'string' }
-      - { label: 'Color', name: 'color', widget: 'string' }
-      - { label: 'Language', name: 'language', widget: 'string' }
+      - { label: 'Category', name: 'category', widget: 'select',
+          options:
+          [
+            'Javascript', 'Html5', 'Css3', 'Python', 'Misc'
+          ]
+        }
+      - { label: 'Color', name: 'color', widget: 'select',
+          options:
+          [
+            { label: 'Javascript', value: '#F7DF1E' },
+            { label: 'CSS', value: '#1572B6' },
+            { label: 'HTML', value: '#E34F26' },
+            { label: 'Misc', value: '#7AAB13' }
+          ]
+        }
+      - { label: 'Language', name: 'language', widget: 'select',
+          options: ['Portuguese', 'English']
+        }
       - { label: 'Post Image', name: 'image', widget: 'image', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
