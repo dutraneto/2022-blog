@@ -12,7 +12,6 @@ export function getPostBySlug(slug) {
   const fullPath = join(postsDirectory, `${realSlug}.mdx`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
-  console.log('data:essa', data.date)
   const date = translatedDate(data.language, data.date)
 
   return {
