@@ -41,7 +41,8 @@ collections:
             { label: 'Javascript', value: '#F7DF1E' },
             { label: 'CSS', value: '#1572B6' },
             { label: 'HTML', value: '#E34F26' },
-            { label: 'Misc', value: '#7AAB13' }
+            { label: 'Misc', value: '#7AAB13' },
+            { label: 'Python', value: '#3776AB' }
           ]
         }
       - { label: 'Language', name: 'language', widget: 'select',
