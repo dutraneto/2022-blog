@@ -18,6 +18,7 @@ collections:
   - name: posts
     label: posts
     folder: posts # A pasta onde ficarão os posts
+    extension: mdx
     create: true # Permite criar um post novo
     slug: '{{slug}}' # Estrutura do nome arquivo, exemplo: title.md
     fields: # Os campos do seu frontmatter
