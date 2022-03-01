@@ -1,11 +1,12 @@
 backend:
   name: github
+  branch: main
   repo: dutraneto/2022-blog
   base_url: https://2022-blog.vercel.app/
-  auth_endpoint: api/auth/ # Essa rota vai ser muito importante mais para frente
+  auth_endpoint: api/auth # Essa rota vai ser muito importante mais para frente
 
 media_folder: public/images
-public_folder: images
+public_folder: /images
 
 publish_mode: editorial_workflow # Isso permite ter aquele workflow com drafts e tudo
 
