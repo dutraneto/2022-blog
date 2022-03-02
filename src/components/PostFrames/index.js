@@ -1,11 +1,15 @@
 import Image from 'next/image'
+import Script from 'next/script'
 
 export function CodePenBlend({ id }) {
   return (
-    <iframe
-      src={`https://codepen.io/dutraneto/pen/${id}`}
-      style={{ height: '440px' }}
-    />
+    <p>
+      <a
+        href={`https://codepen.io/dutraneto/pen/${id}`}
+        rel="noopener noreferrer"
+        target="_blank"
+      >{`https://codepen.io/dutraneto/pen/${id}`}</a>
+    </p>
   )
 }
 
