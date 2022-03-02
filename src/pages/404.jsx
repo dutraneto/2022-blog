@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import Layout from 'components/Layout'
 
 const Container = styled.section`
   align-items: center;
@@ -50,13 +51,15 @@ const Button = styled.a`
 `
 
 const NotFoundPage = () => (
-  <Container>
-    <Title>404</Title>
-    <Text>It looks like you did not find what you are looking for</Text>
-    <Link href="/" passHref>
-      <Button>⬅ Get back to blog!?</Button>
-    </Link>
-  </Container>
+  <Layout>
+    <Container>
+      <Title>404</Title>
+      <Text>It looks like you did not find what you are looking for</Text>
+      <Link href="/" passHref>
+        <Button>⬅ Get back to Home!?</Button>
+      </Link>
+    </Container>
+  </Layout>
 )
 
 export default NotFoundPage
