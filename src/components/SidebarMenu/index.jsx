@@ -11,6 +11,7 @@ const SidebarMenu = () => {
       <S.SidebarMenuList>
         {links.map((link, index) => (
           <S.SidebarMenuItem key={index}>
+            {console.log(router)}
             <Link href={link.url} passHref>
               <S.SidebarMenuLink
                 className={router.pathname === link.url ? 'active' : ''}
