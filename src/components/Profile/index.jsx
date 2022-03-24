@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Profile({ author, position, isMobileHeader }) {
   return (
     <S.ProfileWrapper isMobileHeader={isMobileHeader}>
-      <Link href="/">
+      <Link href="/" passHref>
         <S.ProfileLink>
           <Avatar />
           <div>
