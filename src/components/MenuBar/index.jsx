@@ -13,38 +13,49 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
     setIsMenuOpen(!isMenuOpen)
   }
   return (
-    <S.MenuBarWrapper>
-      <S.MenuBarGroup>
-        <Link passHref href="/">
-          <S.MenuBarLink className={router.pathname === '/' ? 'active' : ''}>
-            <S.MenuBarItem>
-              <Home />
-            </S.MenuBarItem>
-          </S.MenuBarLink>
-        </Link>
-        <S.MenuBarLink>
-          <S.MenuBarItem>
-            <Search />
-          </S.MenuBarItem>
-        </S.MenuBarLink>
-      </S.MenuBarGroup>
-      <S.MenuBarGroupMobile>
+    <>
+      <S.MenuBarWrapper>
         <S.MenuBarGroup>
-          <S.MenuBarItem title="Open menu" onClick={openMenu}>
-            <Menu />
+          <Link href="/" passHref>
+            <S.MenuBarLink
+              title="Get back to home"
+              className={router.pathname === '/' ? 'active' : ''}
+            >
+              <S.MenuBarItem onClick={openMenu}>
+                <Home />
+              </S.MenuBarItem>
+            </S.MenuBarLink>
+          </Link>
+
+          <Link href="/" passHref>
+            <S.MenuBarLink
+              title="Get back to home"
+              className={router.pathname === '/' ? 'active' : ''}
+            >
+              <S.MenuBarItem onClick={openMenu}>
+                <Search />
+              </S.MenuBarItem>
+            </S.MenuBarLink>
+          </Link>
+        </S.MenuBarGroup>
+        <S.MenuBarGroupMobile>
+          <S.MenuBarGroup>
+            <S.MenuBarItem title="Open menu" onClick={openMenu}>
+              <Menu />
+            </S.MenuBarItem>
+          </S.MenuBarGroup>
+        </S.MenuBarGroupMobile>
+        <S.MenuBarGroup>
+          <S.MenuBarItem
+            to="#"
+            title="Nav to top"
+            onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}
+          >
+            <ArrowUp />
           </S.MenuBarItem>
         </S.MenuBarGroup>
-      </S.MenuBarGroupMobile>
-      <S.MenuBarGroup>
-        <S.MenuBarItem
-          to="#"
-          title="Nav to top"
-          onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}
-        >
-          <ArrowUp />
-        </S.MenuBarItem>
-      </S.MenuBarGroup>
-    </S.MenuBarWrapper>
+      </S.MenuBarWrapper>
+    </>
   )
 }
 

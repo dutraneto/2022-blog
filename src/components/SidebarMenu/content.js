@@ -5,15 +5,15 @@ const links = [
   },
   {
     label: 'Blog',
-    url: '/blog/'
+    url: '/blog'
   },
   {
     label: 'Works',
-    url: '/works/'
+    url: '/works'
   },
   {
     label: 'Laboratory',
-    url: '/lab/'
+    url: '/lab'
   }
 ]
 

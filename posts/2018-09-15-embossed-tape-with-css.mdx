@@ -13,39 +13,27 @@ Eu aprendi a usar CSS3 há alguns meses atrás. Desde então, cada layout que eu
 
 Esses dias eu me deparei com uma daquelas fitas de plático autocolantes usadas para identificar objetos. Não estou ao certo sobre o nome em português, mas sei que em inglês chama-se [Embossed Tape](https://en.wikipedia.org/wiki/Embossing_tape).
 
-![Embossed Tape](/assets/images/embossed-plastic-label.jpg)
+<Picture
+  src={
+    'https://res.cloudinary.com/duim1pyqp/image/upload/v1646260306/blog/my-custom-embossed-tape_vqihdi.png'
+  }
+/>
 
 Logo veio a curiosidade de saber como imitar o design da mesma fita da figura acima, utilizando CSS puro.
 
 ### Mão na massa
 
 ```html
-<pre class="language-javascript" markdown="1">
-<code>
 <p><span class="embossed blue">embossed</span></p>
-  <p><span class="embossed blue">plastic labels</span></p>
-  <p><span class="embossed green">letters and</span></p>
-  <p><span class="embossed green">number sets</span></p>
-  <p><span class="embossed red">dutraneto.com</span></p>
-</code>
-</pre>
+<p><span class="embossed blue">plastic labels</span></p>
+<p><span class="embossed green">letters and</span></p>
+<p><span class="embossed green">number sets</span></p>
+<p><span class="embossed red">dutraneto.com</span></p>
 ```
 
-```html
-<!-- My custom embossed tape -->
-<div class="position">
-  <p><span class="embossed blue">embossed</span></p>
-  <p><span class="embossed blue">plastic labels</span></p>
-  <p><span class="embossed green">letters and</span></p>
-  <p><span class="embossed green">number sets</span></p>
-  <p><span class="embossed red">dutraneto.com</span></p>
-</div>
-```
-
-#### Agora, um pouquinho de mágica
+#### Agora, um pouquinho de estilo
 
 ```css
-/* It's Magical */
 .position {
   margin: 1rem auto;
   text-align: center;
